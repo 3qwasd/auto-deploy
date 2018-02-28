@@ -1,15 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven'
-      args '-p 3000:3000'
-    }
-    
-  }
+  agent none
   stages {
     stage('build') {
       steps {
-        echo 'hello world'
+        sh '''cd demo-1
+mvn install'''
       }
     }
   }
