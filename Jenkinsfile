@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''cd demo-1
+        sh '''cd demo-1 
 mvn install'''
       }
     }
